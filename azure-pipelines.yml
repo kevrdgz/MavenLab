@@ -10,6 +10,15 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
+      
+      ls /home/vsts/work/1/s/
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
